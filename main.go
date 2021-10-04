@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-        var s string = "Printing"
+        var s string = "Printing, "
         var t string = "TODO!"
         var g string = "Go"
         var i int = 42
