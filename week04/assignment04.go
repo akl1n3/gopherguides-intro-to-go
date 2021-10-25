@@ -5,8 +5,6 @@ import (
 	"io"
 )
 
-
-
 type Entertainer interface {
 	Name() string
 	Perform(v Venue) error
@@ -20,11 +18,13 @@ type Teardowner interface {
 	Teardown(v Venue) error
 }
 
+// snippet: venue
 type Venue struct {
 	Audience int
 	Log      io.Writer
 }
 
+// snippet: venue
 
 func (v *Venue) Entertain(audience int, acts ...Entertainer) error {
 	if len(acts) == 0 {
@@ -66,4 +66,8 @@ func (v Venue) play(act Entertainer) error {
 	}
 
 	return nil
+}
+
+func main () {
+
 }
